@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand tokens */
+  --gold: 0.63 0.155 68;
+  --gold-dark: 0.52 0.14 68;
+  --gold-light: 0.82 0.12 80;
+  --charcoal: 0.175 0.015 265;
+  --charcoal-light: 0.26 0.015 265;
+  --cream: 0.975 0.003 90;
+
+  /* shadcn tokens */
+  --background: 1 0 0;
+  --foreground: 0.175 0.015 265;
+  --card: 1 0 0;
+  --card-foreground: 0.175 0.015 265;
+  --popover: 1 0 0;
+  --popover-foreground: 0.175 0.015 265;
+  --primary: 0.63 0.155 68;
+  --primary-foreground: 1 0 0;
+  --secondary: 0.975 0.003 90;
+  --secondary-foreground: 0.175 0.015 265;
+  --muted: 0.95 0.003 90;
+  --muted-foreground: 0.48 0.01 265;
+  --accent: 0.63 0.155 68;
+  --accent-foreground: 1 0 0;
+  --destructive: 0.55 0.22 25;
+  --destructive-foreground: 1 0 0;
+  --border: 0.88 0.01 265;
+  --input: 0.88 0.01 265;
+  --ring: 0.63 0.155 68;
+  --radius: 0.375rem;
+  --chart-1: 0.63 0.155 68;
+  --chart-2: 0.175 0.015 265;
+  --chart-3: 0.55 0.12 68;
+  --chart-4: 0.7 0.12 68;
+  --chart-5: 0.4 0.1 265;
+  --sidebar: 0.175 0.015 265;
+  --sidebar-foreground: 1 0 0;
+  --sidebar-primary: 0.63 0.155 68;
+  --sidebar-primary-foreground: 1 0 0;
+  --sidebar-accent: 0.26 0.015 265;
+  --sidebar-accent-foreground: 1 0 0;
+  --sidebar-border: 0.26 0.015 265;
+  --sidebar-ring: 0.63 0.155 68;
+}
+
+* {
+  border-color: oklch(var(--border));
+}
+
+body {
+  background-color: oklch(var(--background));
+  color: oklch(var(--foreground));
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Hero headline — editorial tight tracking */
+.hero-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+
+/* Section display headings — slightly tighter than default */
+.section-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+/* Eyebrow label — wide tracked uppercase */
+.eyebrow {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
